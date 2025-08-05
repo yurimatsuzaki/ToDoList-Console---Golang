@@ -54,7 +54,10 @@ func main(){
 			fmt.Println("Qual o Nº da tarefa que você quer editar?")
 			fmt.Scan(&indexTaskUpdate)
 
-			reader := bufio.NewReader(os.Stdin)
+			if indexTaskUpdate < 1 || indexTaskUpdate > len(taskList){
+				fmt.Println("Indicie Inválido!")
+			} else {
+				reader := bufio.NewReader(os.Stdin)
 			_, _ = reader.ReadString('\n')
 
 			fmt.Println("Digite sua nova tarefa:")
@@ -63,6 +66,7 @@ func main(){
 			taskList[indexTaskUpdate-1] = newTask
 
 			fmt.Println("Tarefa atualizada com sucesso!")
+			}
 		case 4:
 			var indexTaskDelete int
 		
