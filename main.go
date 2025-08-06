@@ -11,7 +11,9 @@ import (
 
 // Função principal do nosso programa, tudo roda aqui, como em C
 func main(){
+	// Maneira de declarar variável de forma mais limpa, sem especificar a tipagem e, obrigatoriamente, com um valor declarado
 	i := 0
+	// Maneira de declarar variável de forma mais 'completa', inserindo a tipagem e sem a necessidade de declarar valor
 	var numberTaskView int
 
 	// Declarando um array em Go; caso fosse colocar valores nele, colocaria dentro das {}
